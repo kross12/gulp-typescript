@@ -1,4 +1,4 @@
-e///<reference path='../definitions/ref.d.ts'/>
+///<reference path='../definitions/ref.d.ts'/>
 var ts = require('typescript');
 var tsApi = require('./tsapi');
 var gutil = require('gulp-util');
