@@ -1,4 +1,4 @@
-///<reference path='../definitions/ref.d.ts'/>
+e///<reference path='../definitions/ref.d.ts'/>
 var ts = require('typescript');
 var tsApi = require('./tsapi');
 var gutil = require('gulp-util');
@@ -317,7 +317,7 @@ var Project = (function () {
                 var parsedMap = JSON.parse(map);
                 parsedMap.file = parsedMap.file.replace(/\\/g, '/');
                 parsedMap.sources = parsedMap.sources.map(function (filePath) {
-                    return filePath.replace(/\\/g, '/');
+                    return path.relative(parsedMap.sourceRoot, originalName);;
                 });
                 var oldFiles;
                 if (_this.options.out !== undefined) {

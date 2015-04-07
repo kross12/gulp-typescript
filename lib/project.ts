@@ -423,7 +423,7 @@ export class Project {
 				var parsedMap = JSON.parse(map);
 				parsedMap.file = parsedMap.file.replace(/\\/g, '/');
 				parsedMap.sources = parsedMap.sources.map(function(filePath) {
-					return filePath.replace(/\\/g, '/');
+					return path.relative(parsedMap.sourceRoot, originalName);
 				});
 
 				var oldFiles: string[];
